@@ -4,13 +4,13 @@ const Data = function() {
             name: "Festival City",
             notes: "Caramel, lemon peel, lavender",
             price: "$16",
-            img: "",
+            img: "./images/festival.png",
         },
         {
             name: "East Side",
             notes: "Dark chocolate, spice, pear",
             price: "$16",
-            img: "",
+            img: "./images/eastside.png",
         }
     ];
     return products;
