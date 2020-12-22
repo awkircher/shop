@@ -5,6 +5,7 @@ const CartData = function() {
     const addToCart = function(event) {
         event.preventDefault();
         console.log(event);
+        console.log(cart.length);
         setCart([...cart, "add"]);
     }
     return {cart, addToCart}

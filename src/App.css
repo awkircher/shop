@@ -2,10 +2,10 @@
   text-align: center;
 }
 
-.active {
+.selected {
   color: green;
 }
 
-.inactive {
+.default {
   color: black;
 }

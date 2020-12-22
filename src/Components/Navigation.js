@@ -1,16 +1,17 @@
-import NavItem from './NavItem'
+import { NavLink } from 'react-router-dom'
 
 const Navigation = function() {
-    const current = window.location.pathname;
     return (
         <div className="Navigation">
             <nav>
                 <li>
                     <a href="./">Good Lands Coffee Roasters</a>
                 </li>
-                <NavItem path="./shop" title="Shop" current={current} />
-                <NavItem path="./locations" title="Locations" current={current}/>
-                <NavItem path="./cart" title="Cart" current={current}/>
+                <NavLink to="/shop" activeClassName="selected">
+                    Shop
+                </NavLink>
+                <NavLink to="/locations" activeClassName="selected">Locations</NavLink>
+                <NavLink to="/cart" activeClassName="selected">Cart</NavLink>
             </nav>
         </div>
     );
