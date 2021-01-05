@@ -1,13 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const CartData = function() {
-    const [cart, setCart] = useState([]);
+    const getSavedCart = () => {
+        return localStorage.getItem('cart');
+    }
+
+    const [cart, setCart] = useState(getSavedCart());
+    
     const addToCart = function(event) {
         event.preventDefault();
-        console.log(event);
-        console.log(cart.length);
+        //use event properties to get at the thing to add
+        //handle case of empty localStorage (not iterable)
         setCart([...cart, "add"]);
     }
+
+    useEffect(() => {
+        localStorage.setItem('cart', cart);
+    }, [cart])
+
+
     return {cart, addToCart}
 }
 
