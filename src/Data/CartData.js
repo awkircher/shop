@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
-//import { Utilities } from "./Utilities";
 
 const CartData = function() {
-    //always start with what's in localStorage, and if nothing's there an empty array
+    // Returns an empty array if localStorage is empty, or the previously saved cart state array.
     const getSavedCart = () => {
         let savedCart = JSON.parse(localStorage.getItem('cart'));
         if (!savedCart) {
@@ -11,24 +10,30 @@ const CartData = function() {
         return savedCart;
     }
     const [cart, setCart] = useState(getSavedCart());
-    
+
+    class ItemInCart {
+        constructor(productId, amount, uid) {
+            this.productId = productId;
+            this.amount = amount;
+            this.uid = uid;
+        }
+    }
+
     const addToCart = function(event) {
         event.preventDefault();
+        // Gets the product ID off the click event
         const elem = event.target;
         const productId = elem.dataset.id;
-        //check cart for existing product IDs and increment
-        //generate stable key
-        //each state array item needs an amount in addition to the product ID and stable key
-        //amount can be set by user when adding
-        //amount needs to update as more products are added
-        setCart([...cart, productId]);
+        const item = new ItemInCart(productId, 0, "1");
+        console.log(item);
+        setCart([...cart, item]);
     }
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart])
 
-
+    console.log("here's the cart " + cart);
     return {cart, addToCart}
 }
 
