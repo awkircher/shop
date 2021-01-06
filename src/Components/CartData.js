@@ -16,7 +16,8 @@ const CartData = function() {
         event.preventDefault();
         const elem = event.target;
         const productId = elem.dataset.id;
-        //use Utilities to combine multiples and generate stable key
+        //check cart for existing product IDs and increment
+        //generate stable key
         //each state array item needs an amount in addition to the product ID and stable key
         //amount can be set by user when adding
         //amount needs to update as more products are added

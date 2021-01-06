@@ -3,11 +3,11 @@ import CartData from "./CartData"
 import Data from "./Data"
 
 const CartHome = function() {
-    const cartData = CartData(); //returns object with cart property and addToCart method
+    const cartData = CartData(); // Returns object with cart property and addToCart method.
     const products = Data(); //returns the array "products" containing objects, e.g. "products[0].name"
     const itemIdsInCart = cartData.cart; //this property contains the state array of product ID strings
     
-    //make a new array of product objects by matching each itemId in state
+    // Returns an array of product objects based on the array of itemIds in the cart.
     const getMatchingProductObjects = function() {
         const matchingProductObjects = itemIdsInCart.map((itemId) => {
             const isMatchingId = function(item) {
