@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import CartItem from '../Models/CartItem.js'
 
 const CartData = function() {
     // Returns an empty array if localStorage is empty, or the previously saved cart state array.
@@ -11,29 +12,35 @@ const CartData = function() {
     }
     const [cart, setCart] = useState(getSavedCart());
 
-    class ItemInCart {
-        constructor(productId, amount, uid) {
-            this.productId = productId;
-            this.amount = amount;
-            this.uid = uid;
-        }
-    }
-
     const addToCart = function(event) {
         event.preventDefault();
-        // Gets the product ID off the click event
+        // Pull all the data off the event
         const elem = event.target;
         const productId = elem.dataset.id;
-        const item = new ItemInCart(productId, 0, "1");
-        console.log(item);
-        setCart([...cart, item]);
+        const productName = elem.dataset.name;
+        const productPrice = elem.dataset.price;
+        const productImg = elem.dataset.img;
+        const quantity = Number(elem[0].value);
+        const uid = String(cart.length + 1);
+        // Are there any of this product in the cart already?
+        const items = [...cart];
+        const isInCart = (cartItem) => cartItem.productId === productId;
+        const indexOfItemInCart = items.findIndex(isInCart);
+        if (indexOfItemInCart === -1) {
+            // It wasn't in the cart -- instantiate a new item
+            const item = new CartItem(productId, productName, productPrice, productImg, quantity, uid);
+            setCart([...items, item]);
+        } else {
+            // It was in the cart -- increment the quantity property
+            items[indexOfItemInCart].quantity += quantity;
+            setCart([...items]);
+        }
     }
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart])
 
-    console.log("here's the cart " + cart);
     return {cart, addToCart}
 }
 

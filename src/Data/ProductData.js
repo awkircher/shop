@@ -1,4 +1,4 @@
-const Data = function() {
+const ProductData = function() {
     const products = [
         {
             id: "1",
@@ -18,4 +18,4 @@ const Data = function() {
     return products;
 }
 
-export default Data;
+export default ProductData;
