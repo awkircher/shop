@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import App from "./App";
-import CartHome from "./Components/CartHome";
-import Locations from "./Components/Locations";
-import Shop from "./Components/Shop";
+import CartHome from "./Views/CartHome";
+import Locations from "./Views/Locations";
+import Shop from "./Views/Shop";
 
 const Routes = () => {
   return (

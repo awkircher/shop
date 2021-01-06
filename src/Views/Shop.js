@@ -1,7 +1,7 @@
-import Navigation from "./Navigation";
-import Data from "./Data";
-import CartData from "./CartData";
-import AddButton from "./AddButton"
+import Navigation from "../Components/Navigation";
+import Data from "../Data/ProductData";
+import CartData from "../Data/CartData";
+import AddButton from "../Components/AddButton"
 
 const Shop = function() {
     const products = Data();

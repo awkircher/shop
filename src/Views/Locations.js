@@ -1,4 +1,4 @@
-import Navigation from './Navigation'
+import Navigation from '../Components/Navigation'
 
 const Locations = function() {
     return (
