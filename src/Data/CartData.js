@@ -29,11 +29,41 @@ const CartData = function() {
         }
     }
 
+    const removeItem = function(uid) { // call this onClick
+        const items = [...cart];
+        const isItem = (cartItem) => cartItem.uid === uid;
+        const indexOfItem = items.findIndex(isItem);
+        items.splice(indexOfItem, 1);
+        setCart([...items]);
+    }
+
+    const editItem = function(value, uid) { // call this onChange
+        const items = [...cart];
+        const isItem = (cartItem) => cartItem.uid === uid;
+        const indexOfItem = items.findIndex(isItem);
+        if (value !== "") {
+            items[indexOfItem].quantity = Number(value);
+        } else {
+            items[indexOfItem].quantity = "";
+        }
+        setCart([...items]);
+    }
+
+    useEffect(() => {
+        const items = [...cart];
+        const hasQuantityZero = (cartItem) => cartItem.quantity === 0;
+        const indexOfItem = items.findIndex(hasQuantityZero);
+        if (indexOfItem !== -1) {
+            removeItem(items[indexOfItem].uid);
+        }
+    })
+    
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart])
 
-    return {cart, addToCart}
+
+    return {cart, addToCart, removeItem, editItem}
 }
 
 export default CartData;

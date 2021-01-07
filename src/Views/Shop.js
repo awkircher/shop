@@ -5,7 +5,7 @@ import AddForm from "../Components/AddForm"
 
 const Shop = function() {
     const products = ProductData();
-    const yourCart = CartData();
+    const cartData = CartData();
     return (
         <div className="Shop">
             <Navigation />
@@ -19,7 +19,7 @@ const Shop = function() {
                 name={products[0].name}
                 img={products[0].img}
                 price={products[0].price}
-                addToCart={yourCart.addToCart}
+                addToCart={cartData.addToCart}
                 />
             </div>
             <div className="product">
@@ -32,7 +32,7 @@ const Shop = function() {
                 name={products[1].name}
                 img={products[1].img}
                 price={products[1].price}
-                addToCart={yourCart.addToCart}
+                addToCart={cartData.addToCart}
                 />
             </div>
         </div>
