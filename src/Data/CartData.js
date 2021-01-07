@@ -12,15 +12,7 @@ const CartData = function() {
     }
     const [cart, setCart] = useState(getSavedCart());
 
-    const addToCart = function(event) {
-        event.preventDefault();
-        // Pull all the data off the event
-        const elem = event.target;
-        const productId = elem.dataset.id;
-        const productName = elem.dataset.name;
-        const productPrice = elem.dataset.price;
-        const productImg = elem.dataset.img;
-        const quantity = Number(elem[0].value);
+    const addToCart = function(productId, productName, productPrice, productImg, quantity) {
         const uid = String(cart.length + 1);
         // Are there any of this product in the cart already?
         const items = [...cart];

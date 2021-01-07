@@ -1,7 +1,7 @@
 import Navigation from "../Components/Navigation";
 import ProductData from "../Data/ProductData";
 import CartData from "../Data/CartData";
-import AddButton from "../Components/AddForm"
+import AddForm from "../Components/AddForm"
 
 const Shop = function() {
     const products = ProductData();
@@ -14,7 +14,7 @@ const Shop = function() {
                 <img src={products[0].img} alt={products[0].name}></img>
                 <p>{products[0].price}</p>
                 <p>{products[0].notes}</p>
-                <AddButton
+                <AddForm
                 id={products[0].id}
                 name={products[0].name}
                 img={products[0].img}
@@ -27,7 +27,7 @@ const Shop = function() {
                 <img src={products[1].img} alt={products[1].name}></img>
                 <p>{products[1].price}</p>
                 <p>{products[1].notes}</p>
-                <AddButton
+                <AddForm
                 id={products[1].id}
                 name={products[1].name}
                 img={products[1].img}
