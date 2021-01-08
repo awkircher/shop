@@ -18,6 +18,7 @@ const AddForm = function(props) {
         const quantity = Number(elem[0].value);
         // Pass arguments back to CartData addToCart method. UID will be calculated there.
         props.addToCart(productId, productName, productPrice, productImg, quantity);
+        props.changeVisibility(true);
     }
 
     return (

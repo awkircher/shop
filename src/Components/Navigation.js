@@ -1,14 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import CartModal from './CartModal'
-import { useState } from "react";
 
 const Navigation = function(props) {
-    const [visibility, setVisibility] = useState(false)
-    
-    const handleMouse = function(isVisible) {
-       setVisibility(isVisible);
-    }
-
     return (
         <div className="Navigation">
             <nav>
@@ -19,10 +12,13 @@ const Navigation = function(props) {
                     Shop
                 </NavLink>
                 <NavLink to="/locations" activeClassName="selected">Locations</NavLink>
-                <NavLink to="/cart" activeClassName="selected" onMouseOver={() => handleMouse(true)} onMouseLeave={() => handleMouse(false)}>Cart</NavLink>
+                <NavLink to="/cart" activeClassName="selected" onMouseOver={() => props.changeVisibility(true)} onMouseLeave={() => props.changeVisibility(false)}>Cart</NavLink>
                 <CartModal 
-                cartContents={props.cartContents}
-                visibility={visibility}/>
+                    cartContents={props.cartContents}
+                    visibility={props.visibility}
+                    //changeVisibility={props.changeVisibility}
+                    itemAdded={props.itemAdded}
+                />
             </nav>
         </div>
     );

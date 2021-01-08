@@ -4,10 +4,13 @@ import AddForm from "../Components/AddForm";
 
 const Shop = function(props) {
     const products = ProductData();
-    
     return (
         <div className="Shop">
-            <Navigation cartContents={props.cartContents}/>
+            <Navigation 
+                cartContents={props.cartContents}
+                visibility={props.visibility}
+                changeVisibility={props.changeVisibility}
+            />
             <div className="product">
                 <h1>{products[0].name}</h1>
                 <img src={products[0].img} alt={products[0].name}></img>
@@ -19,6 +22,7 @@ const Shop = function(props) {
                 img={products[0].img}
                 price={products[0].price}
                 addToCart={props.addToCart}
+                changeVisibility={props.changeVisibility}
                 />
             </div>
             <div className="product">
@@ -32,6 +36,7 @@ const Shop = function(props) {
                 img={products[1].img}
                 price={products[1].price}
                 addToCart={props.addToCart}
+                changeVisibility={props.changeVisibility}
                 />
             </div>
         </div>

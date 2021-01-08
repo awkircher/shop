@@ -6,7 +6,11 @@ function Home(props) {
   return (
     <div className="Home">
       Hello! Welcome to the homepage
-      <Navigation cartContents={props.cartContents}/>
+      <Navigation 
+        cartContents={props.cartContents}
+        changeVisibility={props.changeVisibility}
+        visibility={props.visibility}
+      />
     </div>
   );
 }
