@@ -1,9 +1,9 @@
 import Navigation from '../Components/Navigation'
 
-const Locations = function() {
+const Locations = function(props) {
     return (
         <div className="Locations">
-            <Navigation />
+            <Navigation cartContents={props.cartContents}/>
             Locations
         </div>
     );
