@@ -1,5 +1,21 @@
-.App {
-  text-align: center;
+body {
+  font-size: 16px;
+  color: #222229; 
+  background-color: #f8f4f2;
+}
+
+button {
+  padding: 8px;
+  font-size: 16px;
+  color: #f8f4f2;
+  background-color: #222229;
+  border: none;
+  outline: none;
+}
+
+input {
+  padding: 8px;
+  width: 48px;
 }
 
 .selected {
@@ -8,4 +24,31 @@
 
 .default {
   color: black;
+}
+
+.navTop, .navSide {
+  position: fixed;
+}
+
+.navTop {
+  top: 0;
+}
+
+.navSide {
+  left: 0px;
+    top: 284px;
+    width: 24px;
+    height: fit-content;
+    transform: rotate(-90deg);
+    transform-origin: top;
+}
+
+.NavLink {
+  padding: 16px;
+}
+
+.Home .content {
+  position: relative;
+  top: 50px;
+  left: 50px;
 }

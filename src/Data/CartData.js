@@ -51,6 +51,12 @@ const CartData = function() {
         setCart([...items]);
     }
 
+    const getTotalQuantity = function() {
+        const quantities = cart.map((item) => item.quantity);
+        const totalQuantity = quantities.reduce((a, b) => {return a + b}, 0);
+        return totalQuantity;
+    }
+
     useEffect(() => {
         const items = [...cart];
         const hasQuantityZero = (cartItem) => cartItem.quantity === 0;
@@ -65,7 +71,7 @@ const CartData = function() {
     }, [cart])
 
 
-    return {cart, addToCart, removeItem, editItem}
+    return {cart, addToCart, removeItem, editItem, getTotalQuantity}
 }
 
 export default CartData;

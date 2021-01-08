@@ -1,6 +1,7 @@
 import Navigation from "../Components/Navigation";
 import ProductData from "../Data/ProductData";
 import AddForm from "../Components/AddForm";
+import '../App.css';
 
 const Shop = function(props) {
     const products = ProductData();
@@ -8,6 +9,7 @@ const Shop = function(props) {
         <div className="Shop">
             <Navigation 
                 cartContents={props.cartContents}
+                totalQuantity={props.totalQuantity}
                 modalVisibility={props.modalVisibility}
                 changeModalVisibility={props.changeModalVisibility}
             />

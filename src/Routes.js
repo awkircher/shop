@@ -44,6 +44,7 @@ const Routes = () => {
         <Route exact path="/"> 
           <Home 
             cartContents={cartContents}
+            totalQuantity={cartData.getTotalQuantity}
             modalVisibility={modalVisibility}
             changeModalVisibility={changeModalVisibility}
             />
@@ -51,6 +52,7 @@ const Routes = () => {
         <Route exact path="/cart">
           <CartHome 
             cartContents={cartContents}
+            totalQuantity={cartData.getTotalQuantity}
             modalVisibility={modalVisibility}
             changeModalVisibility={changeModalVisibility}
             />
@@ -58,6 +60,7 @@ const Routes = () => {
         <Route exact path="/locations">
           <Locations 
             cartContents={cartContents}
+            totalQuantity={cartData.getTotalQuantity}
             modalVisibility={modalVisibility}
             changeModalVisibility={changeModalVisibility}
             />
@@ -65,6 +68,7 @@ const Routes = () => {
         <Route exact path="/shop">
           <Shop 
             cartContents={cartContents} 
+            totalQuantity={cartData.getTotalQuantity}
             addToCart={addToCart}
             modalVisibility={modalVisibility}
             changeModalVisibility={changeModalVisibility}

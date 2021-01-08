@@ -2,9 +2,14 @@ import { useState } from 'react'
 
 const AddForm = function(props) {
     // Allow for a default value of "1" while keeping this a controlled component.
-    const [value, setValue] = useState("1");
+    const defaultQuantity = "1";
+    const [value, setValue] = useState(defaultQuantity);
     function handleChange(event) {
-        setValue(event.target.value);
+        if (Number(event.target.value) > 0) {
+            setValue(event.target.value);
+        } else {
+            setValue("0")
+        }
     }
 
     function handleSubmit(event) {
@@ -19,6 +24,7 @@ const AddForm = function(props) {
         // Pass arguments back to CartData addToCart method. UID will be calculated there.
         props.addToCart(productId, productName, productPrice, productImg, quantity);
         props.changeModalVisibility(true);
+        setValue(defaultQuantity);
     }
 
     return (
