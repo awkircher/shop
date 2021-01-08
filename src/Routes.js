@@ -4,15 +4,25 @@ import App from "./App";
 import CartHome from "./Views/CartHome";
 import Locations from "./Views/Locations";
 import Shop from "./Views/Shop";
+import CartData from "./Data/CartData"
 
 const Routes = () => {
+  const cartData = CartData();
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={App} />
-        <Route exact path="/cart" component={CartHome} />
-        <Route exact path="/locations" component={Locations} />
-        <Route exact path="/shop" component={Shop} />
+        <Route exact path="/"> 
+          <App cartData={cartData}/>
+        </Route>
+        <Route exact path="/cart">
+          < CartHome cartData={cartData}/>
+        </Route>
+        <Route exact path="/locations">
+          <Locations cartData={cartData}/>
+        </Route>
+        <Route exact path="/shop">
+          <Shop cartData={cartData}/>
+        </Route>
       </Switch>
     </BrowserRouter>
   );
