@@ -8,8 +8,8 @@ const Shop = function(props) {
         <div className="Shop">
             <Navigation 
                 cartContents={props.cartContents}
-                visibility={props.visibility}
-                changeVisibility={props.changeVisibility}
+                modalVisibility={props.modalVisibility}
+                changeModalVisibility={props.changeModalVisibility}
             />
             <div className="product">
                 <h1>{products[0].name}</h1>
@@ -22,7 +22,7 @@ const Shop = function(props) {
                 img={products[0].img}
                 price={products[0].price}
                 addToCart={props.addToCart}
-                changeVisibility={props.changeVisibility}
+                changeModalVisibility={props.changeModalVisibility}
                 />
             </div>
             <div className="product">
@@ -36,7 +36,7 @@ const Shop = function(props) {
                 img={products[1].img}
                 price={products[1].price}
                 addToCart={props.addToCart}
-                changeVisibility={props.changeVisibility}
+                changeModalVisibility={props.changeModalVisibility}
                 />
             </div>
         </div>

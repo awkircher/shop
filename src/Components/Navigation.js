@@ -12,11 +12,11 @@ const Navigation = function(props) {
                     Shop
                 </NavLink>
                 <NavLink to="/locations" activeClassName="selected">Locations</NavLink>
-                <NavLink to="/cart" activeClassName="selected" onMouseOver={() => props.changeVisibility(true)} onMouseLeave={() => props.changeVisibility(false)}>Cart</NavLink>
+                <NavLink to="/cart" activeClassName="selected" onMouseOver={() => props.changeModalVisibility(true)}>Cart</NavLink>
                 <CartModal 
                     cartContents={props.cartContents}
-                    visibility={props.visibility}
-                    //changeVisibility={props.changeVisibility}
+                    modalVisibility={props.modalVisibility}
+                    changeModalVisibility={props.changeModalVisibility}
                     itemAdded={props.itemAdded}
                 />
             </nav>

@@ -1,8 +1,10 @@
 const CartModal = function(props) {
-    if (props.visibility) {
+    console.table(props.cartContents);
+    if (props.modalVisibility) {
         return (
             <div className="CartModal">
                 {props.cartContents}
+                <button onClick={() => props.changeModalVisibility(false)}>Close</button>
             </div>
         );
     } else {

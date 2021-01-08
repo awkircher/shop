@@ -10,9 +10,9 @@ import EditItem from "./Components/EditItem";
 import { useState } from 'react';
 
 const Routes = () => {
-  const [visibility, setVisibility] = useState(false)
-  const changeVisibility = function(isVisible) {
-      setVisibility(isVisible);
+  const [modalVisibility, setModalVisibility] = useState(false)
+  const changeModalVisibility = function(isVisible) {
+      setModalVisibility(isVisible);
   }
   const cartData = CartData();
   const itemsInCart = cartData.cart;
@@ -42,21 +42,33 @@ const Routes = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/"> 
-          <Home cartContents={cartContents}/>
+          <Home 
+            cartContents={cartContents}
+            modalVisibility={modalVisibility}
+            changeModalVisibility={changeModalVisibility}
+            />
         </Route>
         <Route exact path="/cart">
-          <CartHome cartContents={cartContents}/>
+          <CartHome 
+            cartContents={cartContents}
+            modalVisibility={modalVisibility}
+            changeModalVisibility={changeModalVisibility}
+            />
         </Route>
         <Route exact path="/locations">
-          <Locations cartContents={cartContents}/>
+          <Locations 
+            cartContents={cartContents}
+            modalVisibility={modalVisibility}
+            changeModalVisibility={changeModalVisibility}
+            />
         </Route>
         <Route exact path="/shop">
           <Shop 
             cartContents={cartContents} 
             addToCart={addToCart}
-            visibility={visibility}
-            changeVisibility={changeVisibility}
-          />
+            modalVisibility={modalVisibility}
+            changeModalVisibility={changeModalVisibility}
+            />
         </Route>
       </Switch>
     </BrowserRouter>

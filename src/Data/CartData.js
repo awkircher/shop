@@ -13,9 +13,11 @@ const CartData = function() {
     const [cart, setCart] = useState(getSavedCart());
 
     const addToCart = function(productId, productName, productPrice, productImg, quantity) {
-        const uid = String(cart.length + 1);
-        // Are there any of this product in the cart already?
         const items = [...cart];
+        const uidArray = items.map((item) => Number(item.uid));
+        const highestUid = Math.max(uidArray);
+        const uid = String(highestUid + 1);
+        // Are there any of this product in the cart already?
         const isInCart = (cartItem) => cartItem.productId === productId;
         const indexOfItemInCart = items.findIndex(isInCart);
         if (indexOfItemInCart === -1) {

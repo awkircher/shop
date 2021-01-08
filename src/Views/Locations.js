@@ -5,8 +5,8 @@ const Locations = function(props) {
         <div className="Locations">
             <Navigation 
                 cartContents={props.cartContents}
-                changeVisibility={props.changeVisibility}
-                visibility={props.visibility}/>
+                changeModalVisibility={props.changeModalVisibility}
+                modalVisibility={props.modalVisibility}/>
             Locations
         </div>
     );

@@ -8,8 +8,8 @@ function Home(props) {
       Hello! Welcome to the homepage
       <Navigation 
         cartContents={props.cartContents}
-        changeVisibility={props.changeVisibility}
-        visibility={props.visibility}
+        changeModalVisibility={props.changeModalVisibility}
+        modalVisibility={props.modalVisibility}
       />
     </div>
   );
