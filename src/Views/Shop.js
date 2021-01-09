@@ -14,8 +14,8 @@ const Shop = function(props) {
                 changeModalVisibility={props.changeModalVisibility}
             />
             <div className="product">
-                <h1>{products[0].name}</h1>
                 <img src={products[0].img} alt={products[0].name}></img>
+                <h1>{products[0].name}</h1>
                 <p>{products[0].price}</p>
                 <p>{products[0].notes}</p>
                 <AddForm
@@ -28,8 +28,8 @@ const Shop = function(props) {
                 />
             </div>
             <div className="product">
-                <h1>{products[1].name}</h1>
                 <img src={products[1].img} alt={products[1].name}></img>
+                <h1>{products[1].name}</h1>
                 <p>{products[1].price}</p>
                 <p>{products[1].notes}</p>
                 <AddForm

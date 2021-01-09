@@ -1,12 +1,15 @@
 body {
-  font-size: 16px;
+  font-size: 26px;
   color: #222229; 
   background-color: #f8f4f2;
+  padding: 48px;
 }
 
 button {
   padding: 8px;
-  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
   color: #f8f4f2;
   background-color: #222229;
   border: none;
@@ -16,14 +19,6 @@ button {
 input {
   padding: 8px;
   width: 48px;
-}
-
-.selected {
-  color: green;
-}
-
-.default {
-  color: black;
 }
 
 .navTop, .navSide {
@@ -36,19 +31,64 @@ input {
 
 .navSide {
   left: 0px;
-    top: 284px;
-    width: 24px;
-    height: fit-content;
-    transform: rotate(-90deg);
-    transform-origin: top;
+  top: 284px;
+  width: 24px;
+  height: fit-content;
+  transform: rotate(-90deg);
+  transform-origin: top;
 }
 
 .NavLink {
   padding: 16px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color:#222229;
+  text-decoration: none;
 }
+
+.selected {
+  text-decoration: underline;
+}
+
 
 .Home .content {
   position: relative;
   top: 50px;
   left: 50px;
+  font-family: 'Karla', sans-serif;
+}
+
+.Home .content h1 {
+  font-weight: 700;
+  width: 500px;
+  font-size: 89px;
+}
+
+.Home .content p {
+  font-weight: 400;
+  width: 464px;
+  font-size: 21px;
+}
+
+.Shop .product {
+  display: inline-block;
+  margin: 0px 24px 0px 0px;
+}
+
+.Shop .product h1 {
+  font-family: 'BioRhyme', 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.Shop .product p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+}
+
+.Shop .product img {
+  width: 467px;
+  height: 493px;
 }

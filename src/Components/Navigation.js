@@ -8,7 +8,7 @@ const Navigation = function(props) {
             <nav>
                 <div className="navTop">
                     <a id="logo" href="./">Cream City Coffee Roasters</a> {/* will be a logo img */}
-                    <NavLink className="NavLink" to="/cart" activeClassName="selected" onMouseOver={() => props.changeModalVisibility(true)}>Cart ({totalQuantity})</NavLink>
+                    <NavLink className="NavLink" exact to="/cart" activeClassName="selected" onMouseOver={() => props.changeModalVisibility(true)}>Cart ({totalQuantity})</NavLink>
                     <CartModal 
                         cartContents={props.cartContents}
                         totalQuantity={props.totalQuantity}
@@ -18,9 +18,9 @@ const Navigation = function(props) {
                     />
                 </div>
                 <div className="navSide">
-                    <NavLink className="NavLink" to="/shop" activeClassName="selected">Shop</NavLink>
-                    <NavLink className="NavLink" to="/locations" activeClassName="selected">Locations</NavLink>
-                    <NavLink className="NavLink" to="/" activeClassName="selected">Home</NavLink>
+                    <NavLink className="NavLink" exact to="/shop" activeClassName="selected">Shop</NavLink>
+                    <NavLink className="NavLink" exact to="/locations" activeClassName="selected">Locations</NavLink>
+                    <NavLink className="NavLink" exact to="/" activeClassName="selected">Home</NavLink>
                 </div>
             </nav>
         </div>
