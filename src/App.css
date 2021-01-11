@@ -143,24 +143,51 @@ input {
 }
 
 .CartModal {
-  width: fit-content;
+  width: calc(var(--base-unit)*40);
   height: fit-content;
   position: fixed;
-  top: 47px;
-  right: 2%;
+  top: -1px;
+  right: 0px;
+  z-index: -1;
   box-sizing: border-box;
-  padding: calc((var(--base-unit)*2));
+  padding-top: calc((var(--base-unit)*8));
+  padding-right: calc((var(--base-unit)*2));
+  padding-bottom: calc((var(--base-unit)*2));
+  padding-left: calc((var(--base-unit)*2));
   background-color: var(--white);
   border: 1px solid rgba(0,0,0,0.08);
   font-family: var(--sanserif);
   font-size: calc(var(--base-unit)*3);
 }
 
-.RemoveItem button {
+.CartModal .item {
+  position: relative;
+  line-height: calc(var(--base-unit)*4);
+  padding: 16px 0px;
+  box-shadow: 0px -1px grey;
+}
+
+.CartModal .item h1, .CartModal .item p {
+  margin: 0px;
+}
+
+.CartModal .item h1 {
+  font-size: calc(var(--base-unit)*3);
+}
+
+.CartModal .RemoveItem button {
+  position: absolute;
+  top: calc(var(--base-unit)*3);
+  right: 0px;
   width: calc(var(--base-unit)*2);
   height: calc(var(--base-unit)*2);
   background-image: url('./images/remove.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
+}
+
+.CartModal button.close {
+  margin-top: calc(var(--base-unit)*2);
+  width: 100%;
 }

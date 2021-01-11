@@ -4,9 +4,9 @@ const CartModal = function(props) {
     console.table(props.cartContents);
     if (props.modalVisibility) {
         return (
-            <div className="CartModal" onMouseOver={() => props.changeModalVisibility(true)} onMouseLeave={() => props.changeModalVisibility(false)}>
+            <div className="CartModal" onMouseLeave={() => props.changeModalVisibility(false)}>
                 {props.cartContents}
-                <button onClick={() => props.changeModalVisibility(false)}>Close</button>
+                <button className="close" onClick={() => props.changeModalVisibility(false)}>Close</button>
             </div>
         );
     } else {
