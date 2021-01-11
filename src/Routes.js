@@ -22,11 +22,11 @@ const Routes = () => {
       cartContents = "Your cart is empty."
   } else {
       cartContents = itemsInCart.map((item) => {
+        const multiUnitPrice = item.quantity * item.productPrice;
           return (
               <div className="item" key={item.uid}>
                   <h1>{item.productName}</h1>
-                  <p>{item.quantity} bags</p>
-                  <p>{item.productPrice} each</p>
+                  <p>${multiUnitPrice}</p>
                   <RemoveItem 
                   uid={item.uid}
                   removeItem={cartData.removeItem}/>
