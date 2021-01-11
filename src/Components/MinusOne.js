@@ -1,6 +1,6 @@
 const MinusOne = function(props) {
     return (
-        <div className="add">
+        <div className="minus">
             <button onClick={props.handleClick}>-</button>
         </div>
     );

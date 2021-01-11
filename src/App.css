@@ -4,6 +4,7 @@
   --dark: #222229;
   --near-white: #f8f4f2;
   --white: #ffffff;
+  --gray: #D8D3D0;
   --base-unit: 7px;
 }
 
@@ -111,6 +112,20 @@ input {
 .Shop .product img {
   width: 467px;
   height: 493px;
+}
+
+.add, .minus, .AddForm button[type="submit"], .AddForm input {
+  display: inline-block;
+}
+
+.add button, .minus button {
+  background-color: var(--gray);
+  color: var(--dark);
+  font-weight: 400;
+  width: calc(var(--base-unit)*3);
+  height: calc(var(--base-unit)*3);
+  box-sizing: content-box;
+  text-align: center;
 }
 
 .Locations .map {
