@@ -155,3 +155,12 @@ input {
   font-family: var(--sanserif);
   font-size: calc(var(--base-unit)*3);
 }
+
+.RemoveItem button {
+  width: calc(var(--base-unit)*2);
+  height: calc(var(--base-unit)*2);
+  background-image: url('./images/remove.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
