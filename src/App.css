@@ -144,7 +144,8 @@ input {
 
 .CartModal {
   width: calc(var(--base-unit)*40);
-  height: fit-content;
+  min-height: fit-content;
+  height: calc(var(--base-unit)*40);
   position: fixed;
   top: -1px;
   right: 0px;

@@ -18,13 +18,13 @@ const Shop = function(props) {
             <div className="product">
                 <img src={festival} alt={products[0].name}></img>
                 <h1>{products[0].name}</h1>
-                <p>{products[0].price}</p>
+                <p>${Number(products[0].price)}</p>
                 <p>{products[0].notes}</p>
                 <AddForm
                 id={products[0].id}
                 name={products[0].name}
                 img={festival}
-                price={products[0].price}
+                price={Number(products[0].price)}
                 addToCart={props.addToCart}
                 changeModalVisibility={props.changeModalVisibility}
                 />
@@ -32,13 +32,13 @@ const Shop = function(props) {
             <div className="product">
                 <img src={eastside} alt={products[1].name}></img>
                 <h1>{products[1].name}</h1>
-                <p>{products[1].price}</p>
+                <p>${Number(products[1].price)}</p>
                 <p>{products[1].notes}</p>
                 <AddForm
                 id={products[1].id}
                 name={products[1].name}
                 img={eastside}
-                price={products[1].price}
+                price={Number(products[1].price)}
                 addToCart={props.addToCart}
                 changeModalVisibility={props.changeModalVisibility}
                 />

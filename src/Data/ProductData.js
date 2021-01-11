@@ -4,13 +4,13 @@ const ProductData = function() {
             id: "1",
             name: "Festival City",
             notes: "Caramel, lemon peel, lavender",
-            price: "$16",
+            price: "16",
         },
         {
             id: "2",
             name: "East Side",
             notes: "Dark chocolate, spice, pear",
-            price: "$16",
+            price: "16",
         }
     ];
     return products;
