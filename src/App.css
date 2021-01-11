@@ -145,7 +145,6 @@ input {
 .CartModal {
   width: calc(var(--base-unit)*40);
   min-height: fit-content;
-  height: calc(var(--base-unit)*40);
   position: fixed;
   top: -1px;
   right: 0px;
@@ -161,14 +160,23 @@ input {
   font-size: calc(var(--base-unit)*3);
 }
 
-.CartModal .item {
+.CartModal .item, .CartHome .item {
   position: relative;
   line-height: calc(var(--base-unit)*4);
   padding: 16px 0px;
   box-shadow: 0px -1px grey;
+  display: flex;
 }
 
-.CartModal .item h1, .CartModal .item p {
+.CartHome .item {
+  width: 75%;
+}
+
+.Navigation .CartModal .item {
+  width: 100%;
+}
+
+.item h1, .item p {
   margin: 0px;
 }
 
@@ -176,7 +184,20 @@ input {
   font-size: calc(var(--base-unit)*3);
 }
 
-.CartModal .RemoveItem button {
+.CartModal button.close {
+  margin-top: calc(var(--base-unit)*2);
+  width: 100%;
+}
+
+.CartHome .thumbnail {
+  width: calc(var(--base-unit)*24);
+}
+
+.Navigation .CartModal .thumbnail {
+  width: calc(var(--base-unit)*12);
+}
+
+.RemoveItem button {
   position: absolute;
   top: calc(var(--base-unit)*3);
   right: 0px;
@@ -186,9 +207,4 @@ input {
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
-}
-
-.CartModal button.close {
-  margin-top: calc(var(--base-unit)*2);
-  width: 100%;
 }
