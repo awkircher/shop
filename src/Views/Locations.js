@@ -10,7 +10,7 @@ const Locations = function(props) {
                 totalQuantity={props.totalQuantity}
                 changeModalVisibility={props.changeModalVisibility}
                 modalVisibility={props.modalVisibility}/>
-            <img src={map} alt="map of Milwaukee locations"></img>
+            <img className="map" src={map} alt="map of Milwaukee locations"></img>
             <div className="locationDetails">
                 <h1 className="locationName">Third Ward</h1>
                 <p className="address">

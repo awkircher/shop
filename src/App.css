@@ -1,24 +1,33 @@
+:root {
+  --sanserif: 'Karla', sans-serif;
+  --serif: 'BioRhyme', 'Courier New', monospace;
+  --dark: #222229;
+  --near-white: #f8f4f2;
+  --white: #ffffff;
+  --base-unit: 7px;
+}
+
 body {
-  font-size: 26px;
-  color: #222229; 
-  background-color: #f8f4f2;
-  padding: 48px;
+  font-size: calc((var(--base-unit)*3));
+  color: var(--dark); 
+  background-color: var(--near-white);
+  padding: calc((var(--base-unit)*6));
 }
 
 button {
-  padding: 8px;
-  font-family: 'Karla', sans-serif;
-  font-size: 26px;
+  padding: var(--base-unit);
+  font-family: var(--sanserif);
+  font-size: inherit;
   font-weight: 700;
-  color: #f8f4f2;
-  background-color: #222229;
+  color: var(--near-white);
+  background-color: var(--dark);
   border: none;
   outline: none;
 }
 
 input {
-  padding: 8px;
-  width: 48px;
+  padding: var(--base-unit);
+  width: calc((var(--base-unit)*6));
 }
 
 .navTop, .navSide {
@@ -27,6 +36,9 @@ input {
 
 .navTop {
   top: 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navSide {
@@ -38,12 +50,21 @@ input {
 }
 
 .NavLink {
-  padding: 16px;
-  font-family: 'Karla', sans-serif;
+  position: relative;
+  padding: calc((var(--base-unit)*2));
+  font-family: var(--sanserif);
   font-weight: 700;
   text-transform: uppercase;
-  color:#222229;
+  color:var(--dark);
   text-decoration: none;
+}
+
+.navTop .NavLink {
+  right: 0;
+}
+
+#logo {
+  margin: auto;
 }
 
 .selected {
@@ -53,21 +74,21 @@ input {
 
 .Home .content {
   position: relative;
-  top: 50px;
-  left: 50px;
-  font-family: 'Karla', sans-serif;
+  top: calc((var(--base-unit)*6));
+  left: calc((var(--base-unit)*6));
+  font-family: var(--sanserif);
 }
 
 .Home .content h1 {
   font-weight: 700;
   width: 500px;
-  font-size: 89px;
+  font-size: calc((var(--base-unit)*11));
 }
 
 .Home .content p {
   font-weight: 400;
   width: 464px;
-  font-size: 21px;
+  font-size: calc((var(--base-unit)*2));
 }
 
 .Shop .product {
@@ -78,12 +99,12 @@ input {
 .Shop .product h1 {
   font-family: 'BioRhyme', 'Courier New', monospace;
   font-weight: 700;
-  font-size: 22px;
+  font-size: calc((var(--base-unit)*3));
   text-transform: uppercase;
 }
 
 .Shop .product p {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--sanserif);
   font-weight: 400;
 }
 
@@ -92,9 +113,9 @@ input {
   height: 493px;
 }
 
-.Locations img {
+.Locations .map {
   display: block;
-  margin-bottom: 34px;
+  margin-bottom: calc((var(--base-unit)*4));
 }
 
 .Locations .locationDetails {
@@ -106,17 +127,31 @@ input {
 .Locations .locationDetails .locationName {
   font-family: 'BioRhyme', 'Courier New', monospace;
   font-weight: 700;
-  font-size: 22px;
+  font-size: calc((var(--base-unit)*3));
   text-transform: uppercase;
   margin-bottom: 0px;
 }
 
 .Locations .locationDetails p {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--sanserif);
   font-weight: 400;
   margin: 0px 0px 16px 0px;
 }
 
 .Locations .locationDetails span {
   font-weight: 700;
+}
+
+.CartModal {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 47px;
+  right: 2%;
+  box-sizing: border-box;
+  padding: calc((var(--base-unit)*2));
+  background-color: var(--white);
+  border: 1px solid rgba(0,0,0,0.08);
+  font-family: var(--sanserif);
+  font-size: calc(var(--base-unit)*3);
 }

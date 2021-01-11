@@ -1,3 +1,5 @@
+import '../App.css'
+
 const CartModal = function(props) {
     console.table(props.cartContents);
     if (props.modalVisibility) {
