@@ -31,9 +31,8 @@ input {
 
 .navSide {
   left: 0px;
-  top: 284px;
-  width: 24px;
-  height: fit-content;
+  top: 420px;
+  width: 18px;
   transform: rotate(-90deg);
   transform-origin: top;
 }
@@ -91,4 +90,33 @@ input {
 .Shop .product img {
   width: 467px;
   height: 493px;
+}
+
+.Locations img {
+  display: block;
+  margin-bottom: 34px;
+}
+
+.Locations .locationDetails {
+  display: inline-block;
+  margin-right: 115px;
+  vertical-align: top;
+}
+
+.Locations .locationDetails .locationName {
+  font-family: 'BioRhyme', 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.Locations .locationDetails p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  margin: 0px 0px 16px 0px;
+}
+
+.Locations .locationDetails span {
+  font-weight: 700;
 }

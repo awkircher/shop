@@ -1,5 +1,6 @@
 import '../App.css';
 import Navigation from '../Components/Navigation';
+import hero from '../images/homepage.png'
 
 function Home(props) {
   return (
@@ -14,6 +15,7 @@ function Home(props) {
           Founded in 2002, we've been supplying coffee shops with freshly roasted beans all over the Midwest for nearly 20 years.
           <a href="./locations">Find brew</a>
         </p>
+        <img src={hero} alt="cup of coffee with scattered beans"></img>
       </div>
       <Navigation 
         cartContents={props.cartContents}
