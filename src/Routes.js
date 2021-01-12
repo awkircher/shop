@@ -19,7 +19,7 @@ const Routes = () => {
   const addToCart = cartData.addToCart;
   let cartContents;
   if (itemsInCart.length === 0) {
-      cartContents = "Your cart is empty."
+      cartContents = <div className="emptyCart">Your cart is empty.<br></br><a href="./shop">Continue shopping</a></div>
   } else {
       cartContents = itemsInCart.map((item) => {
         const multiUnitPrice = item.quantity * item.productPrice;

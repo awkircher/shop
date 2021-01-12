@@ -284,6 +284,25 @@ input {
   text-decoration: none;
 }
 
+.emptyCart {
+  text-align: center;
+  font-family: var(--sanserif);
+}
+
+.CartModal .emptyCart {
+  padding: calc(var(--base-unit)*7) 0 calc(var(--base-unit)*8) 0;
+}
+
+.emptyCart a:link, .emptyCart a:visited {
+  color: var(--rust);
+  display: block;
+  margin-top: var(--base-unit);
+}
+
+.CartHome .emptyCart {
+  margin-top: 14%;
+}
+
 .RemoveItem button {
   position: absolute;
   top: calc(var(--base-unit)*3);
