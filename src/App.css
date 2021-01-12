@@ -6,6 +6,7 @@
   --white: #ffffff;
   --gray: #D8D3D0;
   --rust: #B34813;
+  --pink: #F0AF8E;
   --base-unit: 7px;
 }
 
@@ -140,6 +141,12 @@ input {
   height: 493px;
 }
 
+.CartModal .details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .AddForm form {
   position: relative;
 }
@@ -201,7 +208,7 @@ input {
 }
 
 .CartModal {
-  width: calc(var(--base-unit)*40);
+  width: calc(var(--base-unit)*50);
   min-height: fit-content;
   position: fixed;
   top: -1px;
@@ -232,6 +239,14 @@ input {
 
 .Navigation .CartModal .item {
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.CartModal .item p {
+  align-self: center;
+  order: 4;
+  margin-bottom: 9px;
 }
 
 .item h1, .item p {
@@ -252,7 +267,8 @@ input {
 }
 
 .Navigation .CartModal .thumbnail {
-  width: calc(var(--base-unit)*12);
+  width: calc(var(--base-unit)*14);
+  margin-right: calc(var(--base-unit)*3);
 }
 
 .RemoveItem button {
