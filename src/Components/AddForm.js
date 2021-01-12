@@ -7,9 +7,12 @@ const AddForm = function(props) {
     const defaultQuantity = "1";
     const [value, setValue] = useState(defaultQuantity);
     function handleChange(value) {
-        if (Number(value) > 0) {
+        if (Number(value) > 0 && Number(value) < 11) {
             setValue(value);
-        } else {
+        } else if (Number(value) > 10) {
+            setValue("10")
+        }
+        else {
             setValue("0")
         }
     }
