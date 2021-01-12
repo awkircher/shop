@@ -271,6 +271,18 @@ input {
   margin-right: calc(var(--base-unit)*3);
 }
 
+.viewCart {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid var(--dark);
+  color: var(--dark);
+}
+
+.viewCart a:link, .viewCart a:visited {
+  color: var(--dark);
+  text-decoration: none;
+}
+
 .RemoveItem button {
   position: absolute;
   top: calc(var(--base-unit)*3);
