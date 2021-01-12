@@ -140,6 +140,10 @@ input {
   height: 493px;
 }
 
+.AddForm form {
+  position: relative;
+}
+
 .AddForm input, .EditItem input, .add button, .minus button {
   width: calc(var(--base-unit)*7);
   height: calc(var(--base-unit)*7);
@@ -154,6 +158,13 @@ input {
 
 .add, .minus, .AddForm button[type="submit"], .AddForm input {
   display: inline-block;
+}
+
+.AddForm button[type="submit"] {
+  padding: 0px calc(var(--base-unit)*3);
+  height: calc(var(--base-unit)*7);
+  position: absolute;
+  right: 0px;
 }
 
 .add button, .minus button {
