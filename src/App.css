@@ -159,6 +159,22 @@ input {
   justify-content: space-between;
 }
 
+.CartHome .details {
+  font-family: var(--sanserif);
+}
+
+.CartHome .details h1 {
+  font-family: var(--serif);
+  font-size: calc(var(--base-unit)*3);
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: var(--base-unit);
+}
+
+.CartHome .details .EditItem {
+  margin-top: calc(var(--base-unit)*2);
+}
+
 .AddForm form {
   position: relative;
 }
@@ -272,6 +288,7 @@ input {
 
 .CartHome .thumbnail {
   width: calc(var(--base-unit)*24);
+  margin-right: calc(var(--base-unit)*3);
 }
 
 .Navigation .CartModal .thumbnail {
