@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import CartModal from './CartModal'
-import logo from '../images/logo.svg'
+import logo from '../images/logo.png'
 import { useLocation } from 'react-router-dom'
 
 const Navigation = function(props) {
