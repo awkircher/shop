@@ -296,7 +296,7 @@ input {
   position: relative;
   line-height: calc(var(--base-unit)*4);
   padding: 16px 0px;
-  box-shadow: 0px -1px grey;
+  box-shadow: 0px -2px var(--gray);
   display: flex;
 }
 
@@ -376,4 +376,23 @@ input {
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
+}
+
+.checkout {
+  width: 100%;
+  margin-top: calc(var(--base-unit)*3);
+  height: calc(var(--base-unit)*7)
+}
+
+.back {
+  text-decoration: none;
+  font-family: var(--sanserif);
+  margin-bottom: calc(var(--base-unit)*2);
+  display: block;
+  color: var(--rust);
+}
+
+.back span {
+  display: inline-block;
+  transform: rotate(180deg);
 }
