@@ -10,7 +10,9 @@ const CartHome = function(props) {
             changeModalVisibility={props.changeModalVisibility}
             modalVisibility={props.modalVisibility}
             />
-            {props.cartContents}
+            <div className="container">
+                {props.cartContents}
+            </div>
         </div>
     );
 }

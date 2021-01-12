@@ -77,9 +77,14 @@ input {
   text-decoration: underline;
 }
 
-.Home {
+.Home, .Locations, .Shop, .CartHome {
   position: relative;
   height: 100vh;
+}
+
+.Locations .container, .CartHome .container, .Shop .container {
+  width: 75%;
+  margin: calc(var(--base-unit)*7) auto auto auto;
 }
 
 .Home .content {
@@ -125,7 +130,7 @@ input {
 }
 
 .Shop .product h1 {
-  font-family: 'BioRhyme', 'Courier New', monospace;
+  font-family: var(--serif);
   font-weight: 700;
   font-size: calc((var(--base-unit)*3));
   text-transform: uppercase;
@@ -181,16 +186,16 @@ input {
 .Locations .map {
   display: block;
   margin-bottom: calc((var(--base-unit)*4));
+  width: 100%;
 }
 
-.Locations .locationDetails {
-  display: inline-block;
-  margin-right: 115px;
-  vertical-align: top;
+.Locations .detailsContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .Locations .locationDetails .locationName {
-  font-family: 'BioRhyme', 'Courier New', monospace;
+  font-family: var(--serif);
   font-weight: 700;
   font-size: calc((var(--base-unit)*3));
   text-transform: uppercase;
@@ -231,10 +236,6 @@ input {
   padding: 16px 0px;
   box-shadow: 0px -1px grey;
   display: flex;
-}
-
-.CartHome .item {
-  width: 75%;
 }
 
 .Navigation .CartModal .item {
