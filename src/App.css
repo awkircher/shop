@@ -5,6 +5,7 @@
   --near-white: #f8f4f2;
   --white: #ffffff;
   --gray: #D8D3D0;
+  --rust: #B34813;
   --base-unit: 7px;
 }
 
@@ -75,24 +76,46 @@ input {
   text-decoration: underline;
 }
 
+.Home {
+  position: relative;
+  height: 100vh;
+}
 
 .Home .content {
-  position: relative;
-  top: calc((var(--base-unit)*6));
-  left: calc((var(--base-unit)*6));
+  position: absolute;
+  top: 5%;
+  right: 17%;
   font-family: var(--sanserif);
+  width: calc((var(--base-unit)*72));
+  margin: 0px;
 }
 
 .Home .content h1 {
   font-weight: 700;
-  width: 500px;
-  font-size: calc((var(--base-unit)*11));
+  font-size: calc((var(--base-unit)*12));
+  line-height: calc((var(--base-unit)*12));
 }
 
 .Home .content p {
   font-weight: 400;
   width: 464px;
-  font-size: calc((var(--base-unit)*2));
+  font-size: calc((var(--base-unit)*3));
+}
+
+.Home .content p a {
+  margin-left: var(--base-unit);
+  color: var(--rust);
+}
+
+.Home .content p a:visited {
+  color: var(--rust);
+}
+
+.Home .hero {
+  position: relative;
+  z-index: -2;
+  top: 24%;
+  left: 7%;
 }
 
 .Shop .product {
