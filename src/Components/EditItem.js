@@ -21,11 +21,11 @@ const EditItem = function(props) {
 
     return (
         <div className="EditItem">
-            <AddOne 
-                handleClick={addOne} />
-            <input value={props.value} onChange={handleChange}></input>
             <MinusOne 
                 handleClick={minusOne} />
+            <input value={props.value} onChange={handleChange}></input>
+            <AddOne 
+                handleClick={addOne} />
         </div>
     );
 }

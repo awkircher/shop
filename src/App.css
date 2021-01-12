@@ -140,18 +140,24 @@ input {
   height: 493px;
 }
 
+.AddForm input, .EditItem input, .add button, .minus button {
+  width: calc(var(--base-unit)*7);
+  height: calc(var(--base-unit)*7);
+  color: var(--dark);
+  font-weight: 400;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: var(--sanserif);
+  font-size: inherit;
+  border: none;
+}
+
 .add, .minus, .AddForm button[type="submit"], .AddForm input {
   display: inline-block;
 }
 
 .add button, .minus button {
   background-color: var(--gray);
-  color: var(--dark);
-  font-weight: 400;
-  width: calc(var(--base-unit)*3);
-  height: calc(var(--base-unit)*3);
-  box-sizing: content-box;
-  text-align: center;
 }
 
 .Locations .map {

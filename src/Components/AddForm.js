@@ -44,12 +44,12 @@ const AddForm = function(props) {
     return (
         <div className="AddForm">
             <form data-id={props.id} data-name={props.name} data-price={props.price} data-img={props.img} onSubmit={handleSubmit}>
-                <AddOne handleClick={addOne} />
+                <MinusOne handleClick={minusOne} />
                 <input value={value} onChange={(event) => {
                     const value = event.target.value;
                     handleChange(value);
                 }}></input>
-                <MinusOne handleClick={minusOne} />
+                <AddOne handleClick={addOne} />
                 <button type="submit">Add to Cart</button>
             </form>
         </div>
