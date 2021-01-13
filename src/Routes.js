@@ -51,7 +51,7 @@ const Routes = () => {
   return (
     <BrowserRouter basename="/shop">
       <Switch>
-        <Route exact path="/home"> 
+        <Route exact path="/"> 
           <Home 
             cartContents={cartContents}
             totalQuantity={cartData.getTotalQuantity}
