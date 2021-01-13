@@ -4,12 +4,13 @@ import MinusOne from './MinusOne'
 const EditItem = function(props) {
     function handleChange(event) {
         const elem = event.target;
-        props.editItem(elem.value, props.uid);
+        const value = (elem.value >= 10) ? 10 : elem.value;
+        props.editItem(value, props.uid);
     }
 
     function addOne(event) {
         event.preventDefault();
-        const value = props.value + 1;
+        const value = ((props.value + 1) >= 10) ? 10 : (props.value + 1);
         props.editItem(value, props.uid);
     }
 

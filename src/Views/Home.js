@@ -16,7 +16,7 @@ function Home(props) {
           <a href="./locations">Find brew &#10157;</a>
         </p>
       </div>
-      <img className="hero" src={hero} alt="cup of coffee with scattered beans"></img>
+      <img className="hero" src={hero} alt="A cup of coffee with some foam and a long cast shadow."></img>
       <Navigation 
         cartContents={props.cartContents}
         totalQuantity={props.totalQuantity}

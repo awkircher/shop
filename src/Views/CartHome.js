@@ -2,9 +2,9 @@ import Navigation from "../Components/Navigation"
 import '../App.css';
 
 const CartHome = function(props) {
-    const subtotal = (props.cartCombinedPrices).toFixed(2);
-    const calculatedTax = ((props.cartCombinedPrices)*0.05).toFixed(2);
-    const total = (props.cartCombinedPrices + Number(calculatedTax)).toFixed(2);
+    const subtotal = (props.cartSubtotal).toFixed(2);
+    const calculatedTax = ((props.cartSubtotal)*0.05).toFixed(2);
+    const total = (props.cartSubtotal + Number(calculatedTax)).toFixed(2);
     const getSummary = function() {
         if (props.cartContents.length === undefined) {
             return (

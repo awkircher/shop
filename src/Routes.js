@@ -18,15 +18,17 @@ const Routes = () => {
   const itemsInCart = cartData.cart;
   const addToCart = cartData.addToCart;
 
-  // Maps over everything in state and assembles the cart
+  // Maps over everything from CartData and assembles the cart.
   let cartContents;
-  let cartCombinedPrices = [];
+  let cartSubtotal = [];
   if (itemsInCart.length === 0) {
       cartContents = <div className="emptyCart">Your cart is empty.<br></br><a href="./shop">Continue shopping</a></div>
   } else {
       cartContents = itemsInCart.map((item) => {
+        // For each line item get the total cost.
         const multiUnitPrice = item.quantity * item.productPrice;
-        cartCombinedPrices.push(multiUnitPrice);
+        // Add total line item cost to the array for cart subtotal.
+        cartSubtotal.push(multiUnitPrice);
           return (
               <div className="item" key={item.uid}>
                   <img className="thumbnail" src={item.productImg} alt={item.productName}></img>
@@ -45,14 +47,13 @@ const Routes = () => {
           )
       });
   }
-  cartCombinedPrices = cartCombinedPrices.reduce((priceA, priceB) => {return Number(priceA) + Number(priceB)}, 0);
+  cartSubtotal = cartSubtotal.reduce((priceA, priceB) => {return Number(priceA) + Number(priceB)}, 0);
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/"> 
           <Home 
             cartContents={cartContents}
-            // totalQuantity sums the quantity of each product in your cart, displays next to cart nav item
             totalQuantity={cartData.getTotalQuantity}
             modalVisibility={modalVisibility}
             changeModalVisibility={changeModalVisibility}
@@ -62,7 +63,7 @@ const Routes = () => {
           <CartHome 
             cartContents={cartContents}
             totalQuantity={cartData.getTotalQuantity}
-            cartCombinedPrices={cartCombinedPrices}
+            cartSubtotal={cartSubtotal}
             modalVisibility={modalVisibility}
             changeModalVisibility={changeModalVisibility}
             />
