@@ -7,7 +7,7 @@ const CartModal = function(props) {
         return (
             <div className="CartModal" onMouseLeave={() => props.changeModalVisibility(false)}>
                 {props.cartContents}
-                <button className="viewCart" onClick={() => props.changeModalVisibility(false)}><Link to="/cart">Checkout</Link></button>
+                <Link to="/cart"><button className="viewCart" onClick={() => props.changeModalVisibility(false)}>Checkout</button></Link>
                 <button className="close" onClick={() => props.changeModalVisibility(false)}>Close</button>
             </div>
         );
