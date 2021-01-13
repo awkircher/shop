@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.ac4fbdf2.chunk.css",
-    "main.js": "/home/static/js/main.c7885362.chunk.js",
-    "main.js.map": "/home/static/js/main.c7885362.chunk.js.map",
-    "runtime-main.js": "/home/static/js/runtime-main.50182ae6.js",
-    "runtime-main.js.map": "/home/static/js/runtime-main.50182ae6.js.map",
-    "static/js/2.08db8f4d.chunk.js": "/home/static/js/2.08db8f4d.chunk.js",
-    "static/js/2.08db8f4d.chunk.js.map": "/home/static/js/2.08db8f4d.chunk.js.map",
-    "index.html": "/home/index.html",
-    "static/css/main.ac4fbdf2.chunk.css.map": "/home/static/css/main.ac4fbdf2.chunk.css.map",
-    "static/js/2.08db8f4d.chunk.js.LICENSE.txt": "/home/static/js/2.08db8f4d.chunk.js.LICENSE.txt",
-    "static/media/eastside.82a56e34.png": "/home/static/media/eastside.82a56e34.png",
-    "static/media/festival.5ac271d2.png": "/home/static/media/festival.5ac271d2.png",
-    "static/media/homepage.83023647.png": "/home/static/media/homepage.83023647.png",
-    "static/media/map.c45b7fa2.png": "/home/static/media/map.c45b7fa2.png",
-    "static/media/App.css": "/home/static/media/remove.a2d30336.svg"
+    "main.css": "/shop/static/css/main.f6541d02.chunk.css",
+    "main.js": "/shop/static/js/main.a2e6bba9.chunk.js",
+    "main.js.map": "/shop/static/js/main.a2e6bba9.chunk.js.map",
+    "runtime-main.js": "/shop/static/js/runtime-main.704a81b3.js",
+    "runtime-main.js.map": "/shop/static/js/runtime-main.704a81b3.js.map",
+    "static/js/2.08db8f4d.chunk.js": "/shop/static/js/2.08db8f4d.chunk.js",
+    "static/js/2.08db8f4d.chunk.js.map": "/shop/static/js/2.08db8f4d.chunk.js.map",
+    "index.html": "/shop/index.html",
+    "static/css/main.f6541d02.chunk.css.map": "/shop/static/css/main.f6541d02.chunk.css.map",
+    "static/js/2.08db8f4d.chunk.js.LICENSE.txt": "/shop/static/js/2.08db8f4d.chunk.js.LICENSE.txt",
+    "static/media/eastside.82a56e34.png": "/shop/static/media/eastside.82a56e34.png",
+    "static/media/festival.5ac271d2.png": "/shop/static/media/festival.5ac271d2.png",
+    "static/media/homepage.83023647.png": "/shop/static/media/homepage.83023647.png",
+    "static/media/map.c45b7fa2.png": "/shop/static/media/map.c45b7fa2.png",
+    "static/media/App.css": "/shop/static/media/remove.a2d30336.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.50182ae6.js",
+    "static/js/runtime-main.704a81b3.js",
     "static/js/2.08db8f4d.chunk.js",
-    "static/css/main.ac4fbdf2.chunk.css",
-    "static/js/main.c7885362.chunk.js"
+    "static/css/main.f6541d02.chunk.css",
+    "static/js/main.a2e6bba9.chunk.js"
   ]
 }
