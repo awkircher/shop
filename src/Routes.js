@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route, Link } from "react-router-dom";
 import Home from "./Views/Home";
 import CartHome from "./Views/CartHome";
 import Locations from "./Views/Locations";
@@ -22,7 +22,7 @@ const Routes = () => {
   let cartContents;
   let cartSubtotal = [];
   if (itemsInCart.length === 0) {
-      cartContents = <div className="emptyCart">Your cart is empty.<br></br><a href="./shop">Continue shopping</a></div>
+      cartContents = <div className="emptyCart">Your cart is empty.<br></br><Link to="/shop">Continue shopping</Link></div>
   } else {
       cartContents = itemsInCart.map((item) => {
         // For each line item get the total cost.
@@ -49,7 +49,7 @@ const Routes = () => {
   }
   cartSubtotal = cartSubtotal.reduce((priceA, priceB) => {return Number(priceA) + Number(priceB)}, 0);
   return (
-    <BrowserRouter basename="/shop">
+    <HashRouter basename="/">
       <Switch>
         <Route exact path="/"> 
           <Home 
@@ -86,7 +86,7 @@ const Routes = () => {
             />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
