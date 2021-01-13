@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.c2ddc1e1.chunk.css",
-    "main.js": "/static/js/main.c7885362.chunk.js",
-    "main.js.map": "/static/js/main.c7885362.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8b3bfc37.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8b3bfc37.js.map",
-    "static/js/2.08db8f4d.chunk.js": "/static/js/2.08db8f4d.chunk.js",
-    "static/js/2.08db8f4d.chunk.js.map": "/static/js/2.08db8f4d.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.c2ddc1e1.chunk.css.map": "/static/css/main.c2ddc1e1.chunk.css.map",
-    "static/js/2.08db8f4d.chunk.js.LICENSE.txt": "/static/js/2.08db8f4d.chunk.js.LICENSE.txt",
-    "static/media/eastside.82a56e34.png": "/static/media/eastside.82a56e34.png",
-    "static/media/festival.5ac271d2.png": "/static/media/festival.5ac271d2.png",
-    "static/media/homepage.83023647.png": "/static/media/homepage.83023647.png",
-    "static/media/map.c45b7fa2.png": "/static/media/map.c45b7fa2.png",
-    "static/media/App.css": "/static/media/remove.a2d30336.svg"
+    "main.css": "/home/static/css/main.ac4fbdf2.chunk.css",
+    "main.js": "/home/static/js/main.c7885362.chunk.js",
+    "main.js.map": "/home/static/js/main.c7885362.chunk.js.map",
+    "runtime-main.js": "/home/static/js/runtime-main.50182ae6.js",
+    "runtime-main.js.map": "/home/static/js/runtime-main.50182ae6.js.map",
+    "static/js/2.08db8f4d.chunk.js": "/home/static/js/2.08db8f4d.chunk.js",
+    "static/js/2.08db8f4d.chunk.js.map": "/home/static/js/2.08db8f4d.chunk.js.map",
+    "index.html": "/home/index.html",
+    "static/css/main.ac4fbdf2.chunk.css.map": "/home/static/css/main.ac4fbdf2.chunk.css.map",
+    "static/js/2.08db8f4d.chunk.js.LICENSE.txt": "/home/static/js/2.08db8f4d.chunk.js.LICENSE.txt",
+    "static/media/eastside.82a56e34.png": "/home/static/media/eastside.82a56e34.png",
+    "static/media/festival.5ac271d2.png": "/home/static/media/festival.5ac271d2.png",
+    "static/media/homepage.83023647.png": "/home/static/media/homepage.83023647.png",
+    "static/media/map.c45b7fa2.png": "/home/static/media/map.c45b7fa2.png",
+    "static/media/App.css": "/home/static/media/remove.a2d30336.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8b3bfc37.js",
+    "static/js/runtime-main.50182ae6.js",
     "static/js/2.08db8f4d.chunk.js",
-    "static/css/main.c2ddc1e1.chunk.css",
+    "static/css/main.ac4fbdf2.chunk.css",
     "static/js/main.c7885362.chunk.js"
   ]
 }
