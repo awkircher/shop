@@ -49,7 +49,7 @@ const Routes = () => {
   }
   cartSubtotal = cartSubtotal.reduce((priceA, priceB) => {return Number(priceA) + Number(priceB)}, 0);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/shop">
       <Switch>
         <Route exact path="/home"> 
           <Home 
