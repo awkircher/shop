@@ -1,4 +1,5 @@
 import Navigation from "../Components/Navigation"
+import { Link } from 'react-router-dom'
 import '../App.css';
 
 const CartHome = function(props) {
@@ -46,7 +47,7 @@ const CartHome = function(props) {
             />
             <div className="container">
                 <div className="items">
-                    <a className="back" href="./shop"><span>&#10158;</span> Back to shopping</a>
+                    <Link className="back" to="/shop"><span>&#10158;</span> Back to shopping</Link>
                     {props.cartContents}
                 </div>
                 {summary}

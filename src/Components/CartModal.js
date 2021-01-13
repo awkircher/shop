@@ -1,4 +1,5 @@
 import '../App.css'
+import { Link } from 'react-router-dom'
 
 const CartModal = function(props) {
     console.table(props.cartContents);
@@ -6,7 +7,7 @@ const CartModal = function(props) {
         return (
             <div className="CartModal" onMouseLeave={() => props.changeModalVisibility(false)}>
                 {props.cartContents}
-                <button className="viewCart"><a href="./cart">Checkout</a></button>
+                <button className="viewCart" onClick={() => props.changeModalVisibility(false)}><Link to="/cart">Checkout</Link></button>
                 <button className="close" onClick={() => props.changeModalVisibility(false)}>Close</button>
             </div>
         );
